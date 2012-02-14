@@ -10,7 +10,7 @@ use Stampie\Message;
  *
  * @author Andreas Hucks <andreas.hucks@duochrome.net>
  */
-class SwiftMailerTransport implements \Swift_Transport
+class SwiftTransport implements \Swift_Transport
 {
     /**
      * @var Stampie\MailerInterface
@@ -18,7 +18,7 @@ class SwiftMailerTransport implements \Swift_Transport
     private $stampie;
 
     /**
-     * @var Swift_Events_EventDispatcher
+     * @var \Swift_Events_EventDispatcher
      */
     private $dispatcher;
 
@@ -54,7 +54,7 @@ class SwiftMailerTransport implements \Swift_Transport
      * Recipient/sender data will be retrieved from the Message API.
      * The return value is the number of recipients who were accepted for delivery.
      *
-     * @param Swift_Mime_Message $message
+     * @param \Swift_Mime_Message $message
      * @param string[] &$failedRecipients to collect failures by-reference
      * @return int
      */
@@ -86,7 +86,7 @@ class SwiftMailerTransport implements \Swift_Transport
     /**
      * Register a plugin in the Transport.
      *
-     * @param Swift_Events_EventListener $plugin
+     * @param \Swift_Events_EventListener $plugin
      */
     public function registerPlugin(\Swift_Events_EventListener $plugin)
     {
