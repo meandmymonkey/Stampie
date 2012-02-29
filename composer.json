@@ -21,7 +21,8 @@
         "php"                : ">=5.3.8"
     },
     "suggest" : {
-        "kriswallsmith/buzz" : "*",
-        "guzzle/guzzle"      : "*"
+        "kriswallsmith/buzz"      : "*",
+        "guzzle/guzzle"           : "*",
+        "swiftmailer/swiftmailer" : "*"
     }
 }
